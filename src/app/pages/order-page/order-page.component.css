@@ -1,0 +1,56 @@
+/* .card{
+    background: white;
+    padding: 80px;
+    border-radius: 4px;
+    box-shadow: 0 2px 3px #C8D0D8;
+    display: inline-block;
+    margin: 0 auto;
+    top: 35px;
+    left: 27%;
+} */
+.card {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Styles for different screen sizes */
+@media screen and (max-width: 768px) {
+    
+    .card {
+        max-width: 90%;
+    }
+}
+
+/* Additional styles */
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+strong {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+h5 {
+    text-align: center;
+    color: green;
+    margin-bottom: 0;
+}
+
+h5 strong {
+    color: blue;
+}

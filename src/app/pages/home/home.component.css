@@ -1,0 +1,20 @@
+.jillu{
+    background-color:red;
+}
+.farm-image {
+    max-width:13%;
+    height:22%;
+    display: block;
+    margin: 20px auto; /* Adjust margins as needed */
+    border: 2px solid #ddd; /* Optional border */
+    border-radius: 5px; /* Optional border radius */
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}

@@ -1,0 +1,126 @@
+<!-- modal box open but not show the detasils -->
+
+
+
+<!-- <div>
+  <img src="./assets/images/j1.jpg" alt="cow" width="360" height="250" data-bs-toggle="modal" data-bs-target="#modj1">
+
+  <div class="modal" id="modj1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Details</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="card" *ngFor="let item of data">
+            <img class="card-img-top" [src]="item.image" alt="c" width="360" height="250">
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
+              <p class="card-text">Rate: {{item.rate}}</p>
+              <p class="card-text">State: {{item.state}}</p>
+              <p class="card-text">Milk: {{item.milk}}</p>
+              <p class="card-text">{{item.extra}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  -->
+
+
+
+
+
+
+
+<!-- same us nuts: -->
+
+
+
+
+<!-- <div class="row mt-4 container-fluid">
+  <div *ngFor="let item of data" class="mx-auto d-block col-md-3 mb-4">
+    <div class="Products ms-2 card text-center">
+      <h5 class="mt-2">
+        <b>
+          {{item.title}}
+        </b>
+      </h5>
+      <img src={{item.image}} class="hover mx-auto d-block" width="50%" height="50%">
+      <div class="pt-2">
+        <strong>
+          <div class="pb-2">{{item.name}}</div>
+          <div> <b>PRICE:</b>{{item.rate}}</div>
+          <div><b>MILK:</b>{{item.milk}}</div>
+          <div><b>STATE:{{item.state}}</b></div>
+          <div>{{item.extra}}</div>
+        </strong>
+        <div class="mb-2">
+          <span class="btn btn-success">
+            <b>ADD TO CART</b>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  -->
+
+
+
+
+
+
+
+
+<!-- 
+<div id="avai" style=background-color:lightblue>
+  <p style="font-family: monospace;" class="display-6">AVAILABLE CATTLE:</p>
+</div>
+<br>
+
+<div class="container d-flex ">
+  <div class="item">
+    <a>
+      <img src="./assets/images/j1.jpg" alt="cow1" class="c">
+      <h6>Jersey Cow</h6>
+    </a>
+  </div>
+  <div class="item">
+    <a>
+      <img src="./assets/images/hf1.jpg" alt="hcow1" class="c">
+      <h6>Helstein friesian cow</h6>
+    </a>
+  </div>
+</div> -->
+
+<div id="avai" style=background-color:lightblue>
+  <p style="font-family: monospace;" class="display-6">AVAILABLE CATTLE:</p>
+</div>
+<dl>
+  <li style="font-family: monospace;"> Jersey Cow</li>
+  <li style="font-family: monospace;"> Helstein friesian</li>
+</dl>
+
+<div class="container">
+  <div class="row" >
+    <div class="col-md-4" *ngFor="let item of data">
+      <div class="card mb-4">
+        <img class="card-img-top" src="{{item.image}}" alt="cow" style="width: 100%;">
+        <div class="card-body" style="background-color: rgb(206, 235, 235);">
+          <h5 class="card-title">{{item.name}}</h5>
+          <p class="card-text"><strong>Price:</strong>Rs.{{ item.price }}</p>
+          <p class="card-text"><strong>Milk:</strong> {{ item.milk }}</p>
+          <p class="card-text"><strong>State:</strong> {{ item.state }}</p>
+          <p class="card-text">{{ item.extra }}</p>
+          <button class="btn btn-warning btn-block" (click)="addtocart(item)">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

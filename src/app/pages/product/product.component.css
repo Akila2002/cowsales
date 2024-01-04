@@ -1,0 +1,97 @@
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#avai {
+
+    text-align: center;
+}
+
+p {
+    font-family: monospace;
+    padding: 10px;
+}
+
+
+.c {
+
+    border-radius: 22%;
+    width: 50px;
+    height: 220px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal {
+        width: 80%;
+        max-width: 400px;
+        overflow: auto;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+hlo {
+    text-align: center;
+}
+
+.item img {
+    width: 800px;
+}
+
+.item {
+    margin: 0px 15px;
+    text-align: center;
+}
+
+.item a:hover {
+    color: blue;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+
+}
+
+body {
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.5385;
+    color: #333;
+    text-align: left;
+
+}
+
+.card-img-actions {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.card {
+    padding: 20px;
+    margin: 50px;
+}

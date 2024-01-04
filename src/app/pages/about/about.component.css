@@ -1,0 +1,33 @@
+/* .flex{
+    display: flex;
+    
+} */
+#about {
+    background-color: lightblue;
+    text-align: center;
+}
+
+h6 {
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    font-family: monospace;
+    padding: 20px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width:500px;
+    height:450px;
+    display: block;
+    margin: 0 auto;
+}

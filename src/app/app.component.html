@@ -1,0 +1,39 @@
+<div
+  style="background-color: lightgreen; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+  <div><img src="./assets/images/ice cow.jpg" alt="co" style="width: 130px;" class="rounded-circle"></div>
+  <div>
+    <p class="text-center" style="font-family: 'Tangerine', serif;
+    font-size: 33px;"><strong> CHANTHIRAN DAIRY FARM & COW MERGENT</strong> </p>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-expand-sm sticky-top" style="background-color:rgb(23, 112, 59);" id="nav1">
+
+  <!-- <a class="navbar-brand" href="#"><img src="./assets/images/lo1.jpg" alt="co" style="width:70px; height:60px;"
+      class="rounded-circle"></a> -->
+
+  <button type="button" class="navbar-toggler d-sm-none" data-bs-toggle="collapse" data-bs-target="#cow">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <ul class="navbar-nav collapse navbar-collapse justify-content-around" id="cow">
+    <li class="nav-item"><a class="nav-link" [routerLink]="['']"><i class="bi bi-house-fill"></i>HOME</a></li>
+    <li class="nav-item"><a class="nav-link" [routerLink]="['about']"><i class="bi bi-file-person"></i>ABOUT</a></li>
+    <li class="nav-item"><a class="nav-link" [routerLink]="['product']">AVAILABLE </a></li>
+    <!-- <li class="nav-item"><a class="nav-link" [routerLink]="['available']">AVAILABLE</a></li> -->
+    <!-- <li class="nav-item"><a class="nav-link" [routerLink]="['login']">LOGIN</a></li> -->
+    <li class="nav-item"><a class="nav-link" [routerLink]="['contact']"><i
+          class="bi bi-telephone-inbound-fill"></i>CONTACT US</a></li>
+    <li class="nav-item"><a class="nav-link" [routerLink]="['cart']"><i class="bi bi-cart"></i>
+        <div style="font-size: 10px;" class="badge bg-dark">{{totalItem}}</div>
+      </a>
+    </li>
+
+  </ul>
+
+</nav>
+
+
+<router-outlet></router-outlet>

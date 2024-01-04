@@ -1,0 +1,169 @@
+<div id="avai" style=background-color:lightblue>
+    <p style="font-family: monospace;" class="display-6">AVAILABLE CATTLE:</p>
+</div>
+<dl>
+    <li style="font-family: monospace;"> Jersey Cow</li>
+    <li style="font-family: monospace;"> Helstein friesian</li>
+</dl>
+
+<div>
+    <p style="font-family: monospace;" style=background-color:lightblue>JERSEY COW</p>
+</div>
+<br>
+<div class="flex justify-content-around">
+    <img src="./assets/images/j1.jpg" alt="cow" width="360" height="250" data-bs-toggle="modal" data-bs-target="#modj1">
+    <div class="modal" id="modj1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Details</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="./assets/images/j1.jpg" alt="c" width="360" height="250">
+                    <pre [innerHTML]="cowDetails"></pre>
+                </div>
+                <div class="modal-footer">
+                    <button  type="button" class="btn btn-success">Add To Cart</button>&nbsp;
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- <div class="flex justify-content-around">
+        <ng-container *ngFor="let item of filterCategory; let i = index">
+          <img [src]="item.image" alt="cow" width="360" height="250" data-bs-toggle="modal" [attr.data-bs-target]="'#mod' + item.id">
+          <div class="modal" [id]="'mod' + item.id">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Details</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <img [src]="item.image" alt="c" width="360" height="250">
+                  <pre>{{ cowDetails }}</pre>
+                </div>
+                <-- Inside the modal's footer -->
+    <!-- <div class="modal-footer">
+                     <button (click)="addtocart(item)" type="button" class="btn btn-success">Add To Cart</button>
+                     <button (click)="removeFromCart(i)" type="button" class="btn btn-danger">Remove From Cart</button> 
+                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                 </div>
+  
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div> -->
+
+
+    <img src="./assets/images/j2.jpg" alt="c" width="360" height="250" data-bs-toggle="modal" data-bs-target="#modj2">
+    <div class="modal" id="modj2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Details</h4>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal"></button> -->
+                </div>
+                <div class="modal-body">
+                    <img src="./assets/images/j2.jpg" alt="c" width="360" height="250">
+                    <pre [innerHTML]="cowDetails"></pre>
+                </div>
+                <div class="modal-footer">
+                    <a href="#home"><button type="button" class="btn btn-success">Booking</button></a>
+
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <img src="./assets/images/j5.jpg" alt="c" width="360" height="250" data-bs-toggle="modal" data-bs-target="#modj3">
+    <div class="modal" id="modj3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Details</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="./assets/images/j5.jpg" alt="c" width="360" height="250">
+                    <pre [innerHTML]="cow3Details"></pre>
+                </div>
+                <div class="modal-footer">
+                    <a href="#home"><button type="button" class="btn btn-success">Booking</button></a>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br>
+
+<div>
+    <p style="font-family: monospace;" style="font-family: monospace;background-color:lightblue">HELSTEIN FRIENIAN</p>
+</div>
+<br>
+<div class="flex justify-content-around">
+    <img src="./assets/images/hf1.jpg" alt="c" width="380" height="250" data-bs-toggle="modal" data-bs-target="#modh1">
+    <div class="modal" id="modh1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Details</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="./assets/images/hf1.jpg" alt="c" width="380" height="250">
+                    <pre [innerHTML]="cow4Details"></pre>
+                </div>
+                <div class="modal-footer">
+                    <a href="#log"><button type="button" class="btn btn-success">Booking</button></a>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src="./assets/images/hf3.jpg" alt="c" width="380" height="250" data-bs-toggle="modal" data-bs-target="#modh2">
+    <div class="modal" id="modh2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Details</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="./assets/images/hf3.jpg" alt="c" width="380" height="250">
+                    <pre [innerHTML]="cow5Details"></pre>
+                </div>
+                <div class="modal-footer">
+                    <a href="#home"><button type="button" class="btn btn-success">Booking</button></a>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src="./assets/images/hf4.jpg" alt="c" width="380" height="250" data-bs-toggle="modal" data-bs-target="#modh3">
+    <div class="modal" id="modh3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Details</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="./assets/images/hf4.jpg" class="rounded-image" alt="c" width="380" height="250">
+                    <pre [innerHTML]="cow6Details"></pre>
+                </div>
+                <div class="modal-footer">
+                    <a href="#home"><button type="button" class="btn btn-success">Booking</button></a>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<br><br>
+
