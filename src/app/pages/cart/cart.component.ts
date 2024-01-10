@@ -3,6 +3,12 @@ import { CartService } from 'src/app/cart.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
+export interface Order {
+    id?: number;
+    name: string;
+    mobile: string;
+    address: string;
+  }
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -39,7 +45,7 @@ export class CartComponent implements OnInit {
   }
 
   removeItem(item: any) {
-      this.cartService.removeCartItem(item);
+    this.cartService.removeCartItem(item);
   }
 
   emptycart() {
@@ -50,18 +56,46 @@ export class CartComponent implements OnInit {
     this.addressform = false;
   }
 
-  postdata() {
-    this.http.post("http://localhost:3000/products", this.aki.value).subscribe(((res: any) => {
+
+  // postdata() {
+  //   this.http.post("http://localhost:3000/products", this.aki.value).subscribe(((res: any) => {
+  //     console.log(this.aki.value);
+  //     alert("Submit Successfully");
+  //   }));
+  // }
+
+
+postdata() {
+    this.http.post("api/orders", this.aki.value).subscribe(((res: any) => {
       console.log(this.aki.value);
       alert("Submit Successfully");
     }));
   }
-}
 
-  // onsubmit() {
-  //   this.aki.value;
-  //   console.log(this.aki.value)
-  //   this.aki.reset();
+
+
+  // postdata() {
+  //   this.http.post('api/orders', this.aki.value).subscribe({
+  //     next: (res) => {
+  //       console.log('Order submitted:', res);
+  //       alert("Submit Successfully");
+  //       this.router.navigate(['/order-page']); // Navigate on success
+  //     },
+  //     error: (err) => {
+  //       console.error('Error submitting order:', err);
+  //     }
+  //   });
+ 
+  
   // }
 
 
+
+// onsubmit() {
+//   this.aki.value;
+//   console.log(this.aki.value)
+//   this.aki.reset();
+// }
+
+
+  }

@@ -44,6 +44,8 @@
                 <br>
 
                 <!--- form-->
+                <div class="modal-body">
+
                 <div class="mt-3" class="poo border rounded p-3" *ngIf="addressform">
                     <form [formGroup]="aki">
 
@@ -63,12 +65,12 @@
                         </div>
 
                         <button routerLink="/order-page" type="submit" (click)="postdata()"
-                            [disabled]="this.aki.invalid" class="btn btn-warning mt-2">Order</button>&nbsp;
+                        [disabled]="this.aki.invalid" class="btn btn-warning mt-2">Order</button>&nbsp;
 
-
-                        <button type="submit" (click)="cancel()" class="btn btn-dark mt-2">Cancel</button>
+                        <button type="button" (click)="cancel()" class="btn btn-dark mt-2">Cancel</button>
                     </form>
                 </div>
+            </div>
             </div>
             <!--form ends-->
 

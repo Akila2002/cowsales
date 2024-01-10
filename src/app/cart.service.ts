@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Product } from './pages/product/productmodal';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
 
 
 @Injectable({
@@ -9,11 +12,26 @@ import { Product } from './pages/product/productmodal';
 
 export class CartService {
 
+  
   public amount: number = 0;
   public cartItemList: Product[] = []
   public data = new BehaviorSubject<Product[]>([]);
 
-  constructor() { }
+
+
+
+
+  private ordersUrl = 'api/orders'; 
+
+  constructor(private http: HttpClient) {}
+
+  addOrder(order: any): Observable<any> {
+    return this.http.post(this.ordersUrl, order);
+  }
+
+
+
+
 
   getProducts() {
     return this.data.asObservable();

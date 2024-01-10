@@ -56,41 +56,6 @@
     }
   ],
   "products": [
-    {
-      "name": "jillu",
-      "mobile": 12378965418,
-      "address": "maruthaniyoor",
-      "id": 1
-    },
-    {
-      "name": "pavi",
-      "mobile": 14325446587,
-      "address": "avr",
-      "id": 2
-    },
-    {
-      "name": "Akila",
-      "mobile": 325476878,
-      "address": "avr",
-      "id": 3
-    },
-    {
-      "name": "Akila",
-      "mobile": 123546879,
-      "address": "avr",
-      "id": 4
-    },
-    {
-      "name": "Akila",
-      "mobile": 8868768768767,
-      "address": "khjkhigghggjhk",
-      "id": 5
-    },
-    {
-      "name": "kuuadshsoi",
-      "mobile": 456789789,
-      "address": "bjxfkh",
-      "id": 6
-    }
+    
   ]
 }
