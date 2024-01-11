@@ -65,14 +65,24 @@ export class CartComponent implements OnInit {
   // }
 
 
-postdata() {
-    this.http.post("api/orders", this.aki.value).subscribe(((res: any) => {
-      console.log(this.aki.value);
-      alert("Submit Successfully");
-    }));
+  // postdata(event: Event) {
+  //   event.preventDefault();
+  //   this.http.post("api/orders", this.aki.value).subscribe(((res: any) => {
+  //     console.log(this.aki.value);
+  //     alert("Submit Successfully");
+  //   }));
+  // }
+  postdata(): void {
+    if (this.aki.valid) {
+      this.cartService.addOrder(this.aki.value).subscribe({
+        next: (order) => console.log('Order posted:', order),
+        
+        error: (err) => console.error('Error posting order:', err)
+      });
+      alert("successfully");
+    }
   }
-
-
+  
 
   // postdata() {
   //   this.http.post('api/orders', this.aki.value).subscribe({

@@ -4,7 +4,12 @@ import { Product } from './pages/product/productmodal';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-
+export interface Order {
+  id: number;
+  name: string;
+  mobile: string;
+  address: string;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +17,7 @@ import { Observable } from 'rxjs';
 
 export class CartService {
 
-  
+
   public amount: number = 0;
   public cartItemList: Product[] = []
   public data = new BehaviorSubject<Product[]>([]);
@@ -21,13 +26,14 @@ export class CartService {
 
 
 
-  private ordersUrl = 'api/orders'; 
+  private apiUrl = 'api/orders';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  addOrder(order: any): Observable<any> {
-    return this.http.post(this.ordersUrl, order);
+  addOrder(order: Order): Observable<Order> {
+    return this.http.post<Order>(this.apiUrl, order);
   }
+
 
 
 

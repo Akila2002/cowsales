@@ -1,11 +1,13 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Injectable } from '@angular/core';
+
 export interface Order {
-  id?: number;
+  id: number;
   name: string;
   mobile: string;
   address: string;
 }
+
 
 @Injectable({
   providedIn: 'root',
@@ -13,6 +15,7 @@ export interface Order {
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const posts = [
+
       {
         "id": "1",
         "name": "Jersey Cow",
@@ -68,13 +71,27 @@ export class InMemoryDataService implements InMemoryDbService {
         "extra": "And more details contact us 9486666928"
       }    ];
 
-      let orders= [
-
-       {id: 1, }, 
-
+      // const orders: Order[] = [
+      //   { id: 1, name: 'John Doe', mobile: '1234567890', address: 'Some Address' },
+      // ];
+      // const orders = [
+      //   {
+      //     id: 1,
+      //   }
+      // ]
+      const orders = [
+        { id: 1, name: 'John Doe', mobile: '1234567890', address: '123 Main St' },
+      { id: 2, name: 'Jane Smith', mobile: '0987654321', address: '456 Elm St' },
       ];
-    return { posts, orders };
+
+  
+      return { posts, orders };
+    }
   }
-  }
+  
+
+
+  
+  
   
 
