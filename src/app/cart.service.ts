@@ -3,14 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 import { Product } from './pages/product/productmodal';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-export interface Order {
-  id: number;
-  name: string;
-  mobile: string;
-  address: string;
-}
-
+import { Order } from './pages/cart/Order';
 @Injectable({
   providedIn: 'root'
 })

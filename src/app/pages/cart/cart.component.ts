@@ -2,13 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/cart.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Order } from './Order';
 
-export interface Order {
-    id: number;
-    name: string;
-    mobile: string;
-    address: string;
-  }
+
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
