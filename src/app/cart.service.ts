@@ -26,12 +26,12 @@ export class CartService {
 
 
 
-  private apiUrl = 'api/orders';
+  private orderUrl = 'api/orders';
 
   constructor(private http: HttpClient) { }
 
   addOrder(order: Order): Observable<Order> {
-    return this.http.post<Order>(this.apiUrl, order);
+    return this.http.post<Order>(this.orderUrl, order);
   }
 
 

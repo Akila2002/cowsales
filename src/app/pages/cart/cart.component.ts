@@ -4,7 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 export interface Order {
-    id?: number;
+    id: number;
     name: string;
     mobile: string;
     address: string;
