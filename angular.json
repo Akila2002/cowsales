@@ -16,6 +16,7 @@
             "outputPath": "dist/project",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "baseHref": "Akilacpna",
             "polyfills": [
               "zone.js"
             ],
