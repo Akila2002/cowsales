@@ -14,7 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { OrderPageComponent } from './pages/order-page/order-page.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
-
+import { HashLocationStrategy,LocationStrategy } from '@angular/common';
 
 
 
@@ -46,7 +46,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
 
   
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
