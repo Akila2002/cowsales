@@ -69,16 +69,58 @@ export class CartComponent implements OnInit {
   //     alert("Submit Successfully");
   //   }));
   // }
+
+
+
+
+  // postdata(): void {
+  //   if (this.aki.valid) {
+  //     this.cartService.addOrder(this.aki.value).subscribe({
+  //       next: (order) => {
+  //         console.log('Order posted:', order);
+  //         alert("Order Submitted Successfully");
+  //       // this.aki.reset();
+  //       // this.router.navigate(['/Order']);
+
+  //       },
+  //       error: (err) => {
+  //         console.error('Error posting order:', err);
+  //         alert("Error Submitting Order");
+  //       }
+  //     });
+  //   } else {
+  //     alert("Form is not valid");
+  //   }
+  // }
+  
+
+
+
+
   postdata(): void {
     if (this.aki.valid) {
       this.cartService.addOrder(this.aki.value).subscribe({
-        next: (order) => console.log('Order posted:', order),
-        
-        error: (err) => console.error('Error posting order:', err)
+        next: (order) => {
+          console.log('Order posted:', order);
+          alert("Order Submitted Successfully");
+          // Additional logic after successful submission
+        },
+        error: (err) => {
+          console.error('Error posting order:', err);
+          alert("Error Submitting Order");
+        }
       });
-      alert("successfully");
+    } else {
+      alert("Form is not valid");
     }
-  }
+  
+
+
+
+
+
+
+
   
 
   // postdata() {
@@ -105,4 +147,4 @@ export class CartComponent implements OnInit {
 // }
 
 
-  }
+  }}

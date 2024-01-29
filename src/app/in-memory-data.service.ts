@@ -1,4 +1,4 @@
-import { InMemoryDbService } from 'angular-in-memory-web-api';
+import { InMemoryDbService ,RequestInfo} from 'angular-in-memory-web-api';
 import { Injectable } from '@angular/core';
 
 export interface Order {
@@ -82,10 +82,51 @@ export class InMemoryDataService implements InMemoryDbService {
       const orders = [
         { id: 1, name: 'John Doe', mobile: '1234567890', address: '123 Main St' },
       ];
+      
 
   
       return { posts, orders };
     }
+
+
+    // Override post method to handle form submissions
+  post(reqInfo: RequestInfo) {
+    if (reqInfo.collectionName === 'orders') {
+      return this.handleOrdersPost(reqInfo);
+    }
+
+    // If the collectionName is not 'orders', use the default behavior
+    return undefined;
+  }
+
+  private handleOrdersPost(reqInfo: RequestInfo) {
+    const newOrder = reqInfo.utils.getJsonBody(reqInfo.req);
+    console.log('New Order:', newOrder); // Check what you get here
+
+    // Generate a unique ID for the new order (you can use a more robust ID generation logic)
+    newOrder.id = this.genId(reqInfo.collection);
+
+    // Add the new order to the 'orders' collection
+    reqInfo.collection.push(newOrder);
+    console.log('Updated Orders:', reqInfo.collection); // Check the updated collection
+    
+    // Return a response indicating success
+    const options = {
+      body: newOrder, // Include the new order in the response body
+
+      status: 200,
+      headers: reqInfo.headers,
+      url: reqInfo.url,
+    };
+    return reqInfo.utils.createResponse$(() => options);
+  }
+
+  // Function to generate a unique ID (replace with your logic)
+  private genId(collection: any[]): number {
+    return collection.length > 0 ? Math.max(...collection.map(item => item.id)) + 1 : 1;
+  }
+
+    
   }
   
 
