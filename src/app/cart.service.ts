@@ -9,46 +9,29 @@ import { Order } from './pages/cart/Order';
 })
 
 export class CartService {
-
-
   public amount: number = 0;
   public cartItemList: Product[] = []
   public data = new BehaviorSubject<Product[]>([]);
 
-
-
-
-
-  private orderUrl = 'api/orders';
-  
-
+  private orderUrl = 'api/Order';  
   constructor(private http: HttpClient) { }
-
-  addOrder(order: Order): Observable<Order> {
+  Order(order: Order): Observable<Order> {
     return this.http.post<Order>(this.orderUrl, order);
   }
-
-
-
-
-
-
   getProducts() {
     return this.data.asObservable();
   }
   setProduct(product: any) {
     this.cartItemList.push(...product);
+    
     this.data.next(product);
   }
-
-
   addtoCart(product: any) {
     this.cartItemList.push(product);
     this.data.next([...this.cartItemList]); // Emit a new array to trigger update
     this.getTotalPrice(); // Update grandTotal with new total
     console.log(this.cartItemList);
   }
-
   getTotalPrice() {
     let grandTotal = 0;
     this.cartItemList.map((item: any) => {

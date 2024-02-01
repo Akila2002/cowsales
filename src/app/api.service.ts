@@ -10,20 +10,20 @@ export class ApiService {
   }
   constructor(private http: HttpClient) { }
 
-  // getProduct() {
-  //   return this.http.get<any>('http://localhost:3000/posts')
-  //     .pipe(map((res: any) => {
-  //       return res;
-  //     }))
-  // }
+  getProduct() {
+    return this.http.get<any>('https://6529ee5555b137ddc83f33c3.mockapi.io/users')
+      .pipe(map((res: any) => {
+        return res;
+      }))
+    }
   // In api.service.ts
   
-getProduct() {
-  return this.http.get<any>('api/posts')
-    .pipe(map((res: any) => {
-      return res;
-    }))
-}
+// getProduct() {
+//   return this.http.get<any>('api/posts')
+//     .pipe(map((res: any) => {
+//       return res;
+//     }))
+// }
 
 }
 

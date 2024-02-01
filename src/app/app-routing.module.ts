@@ -9,6 +9,7 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { ProductComponent } from './pages/product/product.component';
 import { OrderPageComponent } from './pages/order-page/order-page.component';
+import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'product', component: ProductComponent },
   { path: 'cart', component: CartComponent },
   { path: 'order-page', component: OrderPageComponent },
+  {path:'form',component:FormComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 
 ];
@@ -27,7 +29,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   // imports: [RouterModule.forRoot(routes, { useHash: true })],
-
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

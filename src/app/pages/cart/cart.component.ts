@@ -3,9 +3,6 @@ import { CartService } from 'src/app/cart.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Order } from './Order';
-
-
-
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -19,8 +16,8 @@ export class CartComponent implements OnInit {
   router: any;
   data: any;
   items: any;
+  Order!: any;
   constructor(private cartService: CartService, private http: HttpClient) { }
-
   ngOnInit(): void {
     this.cartService.getProducts().subscribe(res => {
       this.product = res;
@@ -28,123 +25,38 @@ export class CartComponent implements OnInit {
       this.grandTotal = this.cartService.getTotalPrice();
       console.log("total price is", this.grandTotal);
     });
-
     this.aki = new FormGroup({
       name: new FormControl('', Validators.required),
       mobile: new FormControl('', Validators.required),
       address: new FormControl('', Validators.required),
     });
   }
-
   updateGrandTotal() {
     this.grandTotal = this.cartService.getTotalPrice();
     console.log("Total price is", this.grandTotal);
   }
-
   removeItem(item: any) {
     this.cartService.removeCartItem(item);
   }
-
   emptycart() {
     this.cartService.removeAllCart();
   }
-
   cancel() {
     this.addressform = false;
   }
 
+  postdata() {
+    this.http.post("https://6529ee5555b137ddc83f33c3.mockapi.io/info", this.aki.value).subscribe(((res: any) => {
+      console.log(this.aki.value);
+      alert("Submit Successfully");
+        //this.router.navigate(['/order-page']);
 
-  // postdata() {
-  //   this.http.post("http://localhost:3000/products", this.aki.value).subscribe(((res: any) => {
-  //     console.log(this.aki.value);
-  //     alert("Submit Successfully");
-  //   }));
-  // }
+    }));
+  }
 
-
-  // postdata(event: Event) {
-  //   event.preventDefault();
-  //   this.http.post("api/orders", this.aki.value).subscribe(((res: any) => {
-  //     console.log(this.aki.value);
-  //     alert("Submit Successfully");
-  //   }));
-  // }
-
-
-
-
-  // postdata(): void {
-  //   if (this.aki.valid) {
-  //     this.cartService.addOrder(this.aki.value).subscribe({
-  //       next: (order) => {
-  //         console.log('Order posted:', order);
-  //         alert("Order Submitted Successfully");
-  //       // this.aki.reset();
-  //       // this.router.navigate(['/Order']);
-
-  //       },
-  //       error: (err) => {
-  //         console.error('Error posting order:', err);
-  //         alert("Error Submitting Order");
-  //       }
-  //     });
-  //   } else {
-  //     alert("Form is not valid");
-  //   }
-  // }
-  
-
-
-
-
-  postdata(): void {
-    if (this.aki.valid) {
-      this.cartService.addOrder(this.aki.value).subscribe({
-        next: (order) => {
-          console.log('Order posted:', order);
-          alert("Order Submitted Successfully");
-          // Additional logic after successful submission
-        },
-        error: (err) => {
-          console.error('Error posting order:', err);
-          alert("Error Submitting Order");
-        }
-      });
-    } else {
-      alert("Form is not valid");
-    }
-  
+}
 
 
 
 
 
-
-
-  
-
-  // postdata() {
-  //   this.http.post('api/orders', this.aki.value).subscribe({
-  //     next: (res) => {
-  //       console.log('Order submitted:', res);
-  //       alert("Submit Successfully");
-  //       this.router.navigate(['/order-page']); // Navigate on success
-  //     },
-  //     error: (err) => {
-  //       console.error('Error submitting order:', err);
-  //     }
-  //   });
- 
-  
-  // }
-
-
-
-// onsubmit() {
-//   this.aki.value;
-//   console.log(this.aki.value)
-//   this.aki.reset();
-// }
-
-
-  }}
