@@ -1,4 +1,4 @@
-footer{
+/* footer{
     
     height: 10px;
 }
@@ -55,4 +55,63 @@ padding: 70px 30px 20px;
     .footerNav ul{
         flex-direction: column;
     }
+} */
+.footer {
+    background-color: #010a0e;
+    color: #161515;
+    padding: 30px 0;
+}
+
+.footer h4 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: white;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .footer .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.pooja {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+
+}
+
+.pooja li {
+    list-style: none;
+
+}
+
+.pooja li a {
+    text-decoration: none;
+    color: rgb(254, 248, 248);
+    font-size: 0.7em;
+    transition: 0.3s;
+}
+
+.pooja li a:hover {
+    color: rgb(241, 237, 241);
+}
+
+.pooja a i {
+    font-size: 2em;
+    color: rgb(254, 253, 253);
+    opacity: 0.9;
+}
+
+.aki {
+    text-decoration: none;
 }

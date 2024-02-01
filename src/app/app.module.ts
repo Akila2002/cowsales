@@ -12,10 +12,11 @@ import {HttpClientModule } from '@angular/common/http';
 import { ProductComponent } from './pages/product/product.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OrderPageComponent } from './pages/order-page/order-page.component';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { InMemoryDataService }  from './in-memory-data.service';
 import { HashLocationStrategy,LocationStrategy } from '@angular/common';
 import { FormComponent } from './form/form.component';
+import { FooterComponent } from './pages/footer/footer.component';
 
 
 
@@ -31,7 +32,8 @@ import { FormComponent } from './form/form.component';
     CartComponent,
     ProductComponent,
     OrderPageComponent,
-    FormComponent
+    FormComponent,
+    FooterComponent
 
    
   

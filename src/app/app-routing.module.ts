@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'order-page', component: OrderPageComponent },
   {path:'form',component:FormComponent},
+  {path:'footer',component:FooterComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 
 ];

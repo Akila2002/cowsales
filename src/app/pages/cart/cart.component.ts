@@ -49,7 +49,7 @@ export class CartComponent implements OnInit {
     this.http.post("https://6529ee5555b137ddc83f33c3.mockapi.io/info", this.aki.value).subscribe(((res: any) => {
       console.log(this.aki.value);
       alert("Submit Successfully");
-        //this.router.navigate(['/order-page']);
+      this.router.navigate(['/order-page']);
 
     }));
   }
