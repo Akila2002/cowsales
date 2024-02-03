@@ -2,33 +2,26 @@
     width: 70%;
     height: auto;
     border-radius: 50%;
-
 }
-
 a {
     text-decoration: none;
 }
-
 hello {
     display: flex;
     justify-content: center;
 }
-
 hai {
     display: flex;
     justify-content: center;
 }
-
 .carousel-inner {
     height: 450px;
     object-fit: cover;
 }
-
 a{
     color: rgb(15, 12, 12);
 }
 
-/* footer updates */
 footer{
     position: fixed;
     top: 500px;
@@ -90,10 +83,6 @@ padding: 70px 30px 20px;
         flex-direction: column;
     }
 }
-
-
-
-
 .custom-text {
     background-color: lightgreen;
     display: flex;
@@ -147,7 +136,16 @@ padding: 70px 30px 20px;
   a.navbar-brand {
     color: #454545
   }
-
+  .shadow-effect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(10, 10, 10, 0.1); /* Adjust the shadow values as needed */
+    background: linear-gradient(to bottom, #cae1c8, #fbf7f0); /* Add your desired background effect */
+    padding: 20px; /* Adjust the padding as needed */
+    border-radius: 10px; /* Adjust the border-radius as needed */
+  }
 
 
 

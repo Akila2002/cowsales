@@ -1,27 +1,27 @@
-<div style=" display: flex; flex-direction: column; align-items: center; justify-content: center;">
-  <div><img src="./assets/images/ice cow.jpg" alt="co" style="width: 130px;" class="rounded-circle"></div>
-  <div>
-    <p class="text-center" style="font-family: 'Tangerine', serif;
+<div class="shadow-effect">
+  <div style=" display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <img src="./assets/images/ice cow.jpg" alt="co" style="width: 130px;" class="rounded-circle">
+    <div>
+      <p class="text-center" style="font-family: 'Tangerine', serif;
     font-size: 33px;"><strong> CHANTHIRAN DAIRY FARM & COW MERGENT</strong> </p>
+    </div>
   </div>
 </div>
-
-<nav class="navbar navbar-expand-sm sticky-top " id="neubar">
+<nav class="navbar navbar-expand-sm sticky-top" id="neubar">
   <!-- <a class="navbar-brand" href="#"><img src="./assets/images/lo1.jpg" alt="co" style="width:70px; height:60px;"
       class="rounded-circle"></a> -->
-  <button type="button" class="navbar-toggler d-sm-none" data-bs-toggle="collapse" data-bs-target="#cow">
+  <button type="button" class="navbar-toggler d-sm-none" (click)="toggleNavbar()">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <ul class="navbar-nav ms-auto collapse navbar-collapse justify-content-around" id="navbarNavDropdown">
-
+  <ul class="navbar-nav ms-auto collapse navbar-collapse justify-content-around" [class.show]="!isNavbarCollapsed">
     <li class="nav-item"><a class="nav-link mx-2 active" aria-current="page" [routerLink]="['']"><i
-          class="bi bi-house-fill"></i>HOME</a></li>
+    class="bi bi-house-fill"></i>HOME</a></li>
     <li class="nav-item"><a class="nav-link" [routerLink]="['about']"><i class="bi bi-file-person"></i>ABOUT</a></li>
-    <li class="nav-item"><a class="nav-link" [routerLink]="['product']">AVAILABLE </a></li>
+    <li class="nav-item"><a class="nav-link" [routerLink]="['product']"><i class="bi bi-bag-check-fill"></i>AVAILABLE </a></li>
     <!-- <li class="nav-item"><a class="nav-link" [routerLink]="['available']">AVAILABLE</a></li> -->
     <!-- <li class="nav-item"><a class="nav-link" [routerLink]="['login']">LOGIN</a></li> -->
     <li class="nav-item"><a class="nav-link" [routerLink]="['contact']"><i
-          class="bi bi-telephone-inbound-fill"></i>CONTACT US</a></li>
+    class="bi bi-telephone-inbound-fill"></i>CONTACT US</a></li>
     <li class="nav-item"><a class="nav-link" [routerLink]="['cart']"><i class="bi bi-cart"></i>
         <div style="font-size: 10px;" class="badge bg-dark">{{totalItem}}</div>
       </a>
@@ -30,7 +30,7 @@
 </nav>
 
 
-
 <router-outlet></router-outlet>
 <br>
+
 <app-footer></app-footer>

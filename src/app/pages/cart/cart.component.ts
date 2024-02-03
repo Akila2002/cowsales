@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/cart.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { Order } from './Order';
 @Component({
   selector: 'app-cart',
@@ -13,11 +14,11 @@ export class CartComponent implements OnInit {
   public grandTotal: number = 0;
   public addressform = false;
   aki: FormGroup | any;
-  router: any;
+  
   data: any;
   items: any;
   Order!: any;
-  constructor(private cartService: CartService, private http: HttpClient) { }
+  constructor(private cartService: CartService, private http: HttpClient,private router: Router) { }
   ngOnInit(): void {
     this.cartService.getProducts().subscribe(res => {
       this.product = res;
@@ -46,13 +47,14 @@ export class CartComponent implements OnInit {
   }
 
   postdata() {
-    this.http.post("https://6529ee5555b137ddc83f33c3.mockapi.io/info", this.aki.value).subscribe(((res: any) => {
-      console.log(this.aki.value);
-      alert("Submit Successfully");
-      this.router.navigate(['/order-page']);
-
-    }));
+    this.http.post("https://6529ee5555b137ddc83f33c3.mockapi.io/info", this.aki.value)
+      .subscribe(((res: any) => {
+        console.log(this.aki.value);
+        alert("Order Successfully");
+        this.router.navigate(['/order-page']);
+      }));
   }
+  
 
 }
 

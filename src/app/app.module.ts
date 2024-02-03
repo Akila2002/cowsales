@@ -4,8 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
-import { AvailableComponent } from './pages/available/available.component';
-import { LoginComponent } from './pages/login/login.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CartComponent } from './pages/cart/cart.component';
 import {HttpClientModule } from '@angular/common/http';
@@ -15,7 +13,6 @@ import { OrderPageComponent } from './pages/order-page/order-page.component';
 // import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { InMemoryDataService }  from './in-memory-data.service';
 import { HashLocationStrategy,LocationStrategy } from '@angular/common';
-import { FormComponent } from './form/form.component';
 import { FooterComponent } from './pages/footer/footer.component';
 
 
@@ -26,13 +23,10 @@ import { FooterComponent } from './pages/footer/footer.component';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    AvailableComponent,
-    LoginComponent,
     ContactComponent,
     CartComponent,
     ProductComponent,
     OrderPageComponent,
-    FormComponent,
     FooterComponent
 
    

@@ -48,13 +48,19 @@ h6 {
 }
 
 .poo {
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    max-width: 400px; 
-    margin: 0 auto;
-    padding: 20px; 
-    background-color: rgb(214, 214, 219); 
-    color: #333; 
+  border: 1px solid #d1eade; 
+  border-radius: 5px; 
+  max-width: 400px; 
+  margin: 0 auto;
+  padding: 20px; 
+  background-color: rgb(227, 233, 175); 
+  color: #333; 
+}
+
+
+.poo:hover {
+  background-color: rgb(168, 215, 219); 
+  transform: scale(1.05); /* Add a slight scale effect on hover */
 }
 .custom-table-center {
     margin: 0 auto; /* Center the table horizontally */

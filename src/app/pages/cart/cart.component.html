@@ -43,10 +43,10 @@
                 <br>
                 <br>
 
-                <!--- form-->
+
 
                 <div class="mt-3" class="poo border rounded p-3" *ngIf="addressform">
-                    <form [formGroup]="aki"  (ngSubmit)="postdata()">
+                    <form [formGroup]="aki" (ngSubmit)="postdata()">
 
                         <div class="form-group">
                             <label for="exampleInputPassword1">Name</label>
@@ -66,12 +66,10 @@
                         <button type="submit" [disabled]="aki.invalid" class="btn btn-warning mt-2">Order</button>
                         &nbsp;
 
-                        <button type="button"  (click)="cancel()" class="btn btn-dark mt-2">Cancel</button>
+                        <button type="button" (click)="cancel()" class="btn btn-dark mt-2">Cancel</button>
                     </form>
                 </div>
             </div>
-            
-            <!--form ends-->
 
 
 
@@ -80,16 +78,11 @@
     </div>
 
 </ng-container>
-
-
-
 <ng-container *ngIf="product.length==0">
-
     <div class="container">
         <div class="cart">
             <img src="./assets/images/emptycart.png" alt="cart">
             <h5><a routerLink="/product"><button class="btn btn-primary">Shop Now</button></a></h5>
         </div>
-       
     </div>
 </ng-container>

@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            
             "outputPath": "dist/project",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -33,12 +34,12 @@
             "scripts": [
               "bootstrap/dist/js/bootstrap.min.js",
               "@popperjs/core/dist/umd/popper.min.js",
-  
                 "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
               ]
               
           
           },
+          
           "configurations": {
             "production": {
               "budgets": [

@@ -8,14 +8,12 @@
 }
 
 h6 {
-    font-family: monospace;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 p {
-    font-family: monospace;
     padding: 20px;
 }
 

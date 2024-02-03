@@ -1,117 +1,45 @@
-/* footer{
-    
-    height: 10px;
-}
-.footer-container{
-background-color: black;
-width: 100%;
-padding: 70px 30px 20px;
-}
-.hlo{
-    display: flex;
-   }
-.hlo a{
-    text-decoration: none;
-    padding: 10px;
-    background-color: white;
-    margin: 10px;
-    border-radius: 50%;
-}
-.hlo a i{
-    font-size: 2em;
-    color: black;
-    opacity: 0.9;
-}
-.hlo a:hover{
-    background-color: black;
-    transition: 0.5s;
+
+/* Add this CSS to your stylesheet */
+.nav-link {
+  color: #333; /* Default color for the links */
+  font-size: 16px; /* Default font size for the links */
+  transition: color 0.3s ease, font-size 0.3s ease; /* Add a smooth transition effect for color and font size changes */
 }
 
-.footerNav ul li a:hover{
-    opacity: 1;
-    
-}
-.footerBottom {
-    background-color: black;
-    padding: 20px;
-
-}
-.footerBottom p{
-    color: white;
-}
-.designer{
-    opacity: 0.7;
-    text-transform:uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin: 0px 5px;
-}
-.box{
-    color: white;
-    float: right;
-    padding-top: 10px;
-}
-@media(max-width:700px){
-    .footerNav ul{
-        flex-direction: column;
-    }
-} */
-.footer {
-    background-color: #010a0e;
-    color: #161515;
-    padding: 30px 0;
+.nav-link:hover {
+  color: #f00; /* Change the color to red (or any other color of your choice) on hover */
+  font-size: 18px; /* Change the font size on hover */
 }
 
-.footer h4 {
-    color: white;
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.footer p {
-    font-size: 14px;
-    color: white;
-}
-
-/* Adjustments for responsiveness */
-@media (max-width: 768px) {
-    .footer .container {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-
-.pooja {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 50px;
-
-}
-
-.pooja li {
+  .social-icons {
     list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+  }
 
-}
+  .social-icons li {
+    margin-right: 15px;
+  }
 
-.pooja li a {
+  .social-icons a {
+    color: #0c0c0c; 
+    font-size: 24px;
     text-decoration: none;
-    color: rgb(254, 248, 248);
-    font-size: 0.7em;
-    transition: 0.3s;
-}
+    transition: color 0.3s ease-in-out;
+  }
 
-.pooja li a:hover {
-    color: rgb(241, 237, 241);
-}
+  .social-icons a:hover {
+    color: #bdffe2; 
+  }
 
-.pooja a i {
-    font-size: 2em;
-    color: rgb(254, 253, 253);
-    opacity: 0.9;
-}
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
 
-.aki {
-    text-decoration: none;
-}
+    .footer-col {
+      flex: 0 0 100%;
+      margin-bottom: 30px;
+    }
+  }

@@ -7,12 +7,20 @@ import { CartService } from './cart.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  
+  isNavbarCollapsed = true;
+
+  toggleNavbar() {
+    this.isNavbarCollapsed = !this.isNavbarCollapsed;
+  }
 
   public totalItem:number=0;
+  
 
   constructor(private cartService:CartService){}
   
   ngOnInit(): void {
+    
 
     this.cartService.getProducts()
     
@@ -23,5 +31,6 @@ export class AppComponent implements OnInit {
     })
     
   }
+  
   
 }
