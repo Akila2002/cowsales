@@ -34,7 +34,7 @@ export class CartComponent implements OnInit {
   }
   updateGrandTotal() {
     this.grandTotal = this.cartService.getTotalPrice();
-    console.log("Total price is", this.grandTotal);
+    // console.log("Total price is", this.grandTotal);
   }
   removeItem(item: any) {
     this.cartService.removeCartItem(item);
@@ -47,12 +47,27 @@ export class CartComponent implements OnInit {
   }
 
   postdata() {
-    this.http.post("https://6529ee5555b137ddc83f33c3.mockapi.io/info", this.aki.value)
-      .subscribe(((res: any) => {
-        console.log(this.aki.value);
+    const orderData = {
+      name: this.aki.value.name,
+      mobile: this.aki.value.mobile,
+      address: this.aki.value.address,
+      items: this.product.map((item: any) => {
+        return {
+          name: item.name,
+          price: item.price,
+          milk: item.milk,
+          state: item.state,
+          image: item.image
+        };
+      })
+    };
+
+    this.http.post("https://6529ee5555b137ddc83f33c3.mockapi.io/info", orderData)
+      .subscribe((res: any) => {
+        console.log(orderData);
         alert("Order Successfully");
         this.router.navigate(['/order-page']);
-      }));
+      });
   }
   
 
