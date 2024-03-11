@@ -10,8 +10,8 @@
   <div class="row" >
     <div class="col-md-4" *ngFor="let item of data">
       <div class="card mb-4">
-        <img class="card-img-top" src="{{item.image}}" alt="cow" style="width: 100%;">
-        <div class="card-body text-center" style="background-color: rgb(206, 235, 235);">
+        <img class="card-img-top" src="{{item.image}}"(click)="addtocart(item)" alt="cow" style="width: 100%; ">
+        <div class="card-body text-center"  style="background-color: rgb(206, 235, 235);">
           <h5 class="card-title">{{item.name}}</h5>
           <p class="card-text"><strong>Price:</strong>Rs.{{ item.price }}</p>
           <p class="card-text"><strong>Milk:</strong> {{ item.milk }}</p>

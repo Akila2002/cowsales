@@ -14,6 +14,7 @@ import { OrderPageComponent } from './pages/order-page/order-page.component';
 // import { InMemoryDataService }  from './in-memory-data.service';
 import { HashLocationStrategy,LocationStrategy } from '@angular/common';
 import { FooterComponent } from './pages/footer/footer.component';
+import { HistoryComponent } from './history/history.component';
 
 
 
@@ -27,7 +28,9 @@ import { FooterComponent } from './pages/footer/footer.component';
     CartComponent,
     ProductComponent,
     OrderPageComponent,
-    FooterComponent
+    FooterComponent,
+    HistoryComponent,
+    
 
    
   
