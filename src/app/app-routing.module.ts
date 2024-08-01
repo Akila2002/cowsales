@@ -7,7 +7,8 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { ProductComponent } from './pages/product/product.component';
 import { OrderPageComponent } from './pages/order-page/order-page.component';
-import { HistoryComponent } from './history/history.component';
+import { OrderComponent } from './order/order.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -18,8 +19,11 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'order-page', component: OrderPageComponent },
   {path:'footer',component:FooterComponent},
-  {path:'history',component:HistoryComponent},
+  {path:'order',component:OrderComponent},
+  { path: 'login', component: LoginComponent },
+
   { path: '', redirectTo: 'home', pathMatch: 'full' }
+  
 
 ];
 

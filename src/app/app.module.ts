@@ -14,9 +14,10 @@ import { OrderPageComponent } from './pages/order-page/order-page.component';
 // import { InMemoryDataService }  from './in-memory-data.service';
 import { HashLocationStrategy,LocationStrategy } from '@angular/common';
 import { FooterComponent } from './pages/footer/footer.component';
-import { HistoryComponent } from './history/history.component';
-
-
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { OrderComponent } from './order/order.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { HistoryComponent } from './history/history.component';
     ProductComponent,
     OrderPageComponent,
     FooterComponent,
-    HistoryComponent,
+    OrderComponent,LoginComponent
+    
     
 
    
@@ -40,11 +42,11 @@ import { HistoryComponent } from './history/history.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    CommonModule,
+    FormsModule,
     // HttpClientInMemoryWebApiModule.forRoot(
     //   InMemoryDataService, { dataEncapsulation: false}
     // )
-
-
   
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],

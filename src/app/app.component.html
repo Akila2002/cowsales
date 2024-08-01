@@ -15,14 +15,18 @@
   </button>
   <ul class="navbar-nav ms-auto collapse navbar-collapse justify-content-around" [class.show]="!isNavbarCollapsed">
     <li class="nav-item"><a class="nav-link mx-2 active" aria-current="page" [routerLink]="['']"><i
-    class="bi bi-house-fill"></i>HOME</a></li>
-    <li class="nav-item"><a class="nav-link" [routerLink]="['about']"><i class="bi bi-file-person"></i>ABOUT</a></li>
-    <li class="nav-item"><a class="nav-link" [routerLink]="['product']"><i class="bi bi-bag-check-fill"></i>AVAILABLE </a></li>
+          class="bi bi-house-fill"></i> HOME</a></li>
+    <li class="nav-item"><a class="nav-link" [routerLink]="['about']"><i class="bi bi-file-person"></i> ABOUT</a></li>
+    <li class="nav-item"><a class="nav-link" [routerLink]="['product']"><i class="bi bi-bag-check-fill"></i> AVAILABLE
+      </a></li>
     <!-- <li class="nav-item"><a class="nav-link" [routerLink]="['available']">AVAILABLE</a></li> -->
     <!-- <li class="nav-item"><a class="nav-link" [routerLink]="['login']">LOGIN</a></li> -->
-    <li class="nav-item"><a class="nav-link" [routerLink]="['contact']"><i
-    class="bi bi-telephone-inbound-fill"></i>CONTACT US</a></li>
-    <li class="nav-item"><a class="nav-link" [routerLink]="['history']"><i class="bi bi-file-earmark-pdf-fill"></i>Order History</a></li>
+    <li class="nav-item"><a class="nav-link" [routerLink]="['contact']"><i class="bi bi-telephone-inbound-fill"></i>
+        CONTACT US</a></li>
+    <!-- <li class="nav-item"><a class="nav-link" [routerLink]="['order']"><i class="bi bi-file-earmark-pdf-fill"></i>Order
+        History</a></li> -->
+    <li class="nav-item"><a class="nav-link" [routerLink]="['login']"><i class="bi bi-person-fill-check"></i> Admin
+        Login</a></li>
 
     <li class="nav-item"><a class="nav-link" [routerLink]="['cart']"><i class="bi bi-cart"></i>
         <div style="font-size: 10px;" class="badge bg-dark">{{totalItem}}</div>

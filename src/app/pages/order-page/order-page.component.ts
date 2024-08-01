@@ -15,7 +15,7 @@ export class OrderPageComponent implements OnInit {
     setTimeout(() => {
       this.router.navigate(["/"])
       this.cart.removeAllCart();
-    }, 4000);
+    }, 2000);
 
   }
 

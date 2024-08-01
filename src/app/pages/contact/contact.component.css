@@ -18,23 +18,19 @@
 .contact-info {
     margin: 20px;
     padding: 10px;
-    background-color: #f0f0f0;
-}
-
-/* Style for individual contact info divs with box shadow */
-.contact-info div {
-    margin: 10px 0;
-    box-shadow: 3px 3px 5px #888888;
+    box-shadow: 1px 2px 3px 5px #888888;
     /* Cute box shadow */
-    padding: 10px;
+    text-align: center;
 }
+    
+
+
 
 /* Style for the 'location-map' div */
 .location-map {
     margin: 20px;
     padding: 10px;
-    background-color: #f0f0f0;
-    box-shadow: 3px 3px 5px #888888;
+    box-shadow: 1px 2px 3px 5px #888888;
     /* Cute box shadow */
     text-align: center;
 }
@@ -43,8 +39,7 @@
 .youtube-video {
     margin: 20px;
     padding: 10px;
-    background-color: #f0f0f0;
-    box-shadow: 3px 3px 5px #888888;
+    box-shadow: 1px 2px 3px 5px #888888;
     /* Cute box shadow */
     text-align: center;
 }

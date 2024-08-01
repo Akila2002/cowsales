@@ -8,7 +8,7 @@ import { Order } from './pages/cart/Order';
   providedIn: 'root'
 })
 export class CartService {
-  private orderUrl = 'api/Order';  // Update with your actual API endpoint for placing orders
+  private orderUrl = 'api/checkout';  // Update with your actual API endpoint for placing orders
 
   public amount: number = 0;
   public cartItemList: Product[] = [];
@@ -21,17 +21,15 @@ export class CartService {
   }
 
 
-
-  getOrderHistory(): Observable<any> {
-    return this.http.get('https://6529ee5555b137ddc83f33c3.mockapi.io/info');
+  // Method to fetch order history
+  getOrderHistory(): Observable<any[]> {
+    return this.http.get<any[]>('http://localhost:3000/cattle');
   }
-
   
-  
-
   getProducts() {
     return this.data.asObservable();
   }
+
 
   setProduct(product: any) {
     this.cartItemList.push(...product);
@@ -63,3 +61,5 @@ export class CartService {
     this.data.next(this.cartItemList);
   }
 }
+
+
